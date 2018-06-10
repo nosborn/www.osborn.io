@@ -1,0 +1,30 @@
+# yamllint disable rule:line-length
+---
+image: node:latest
+
+before_script:
+  - yarn install --pure-lockfile
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+variables:
+  AWS_REGION: eu-west-2
+
+build:
+  stage: build
+  script:
+    - gulp
+
+deploy:
+  stage: deploy
+  environment:
+    name: Production
+    url: https://osborn.io
+  only:
+    - master
+  script:
+    - gulp publish
+...
