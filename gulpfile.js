@@ -55,4 +55,5 @@ gulp.task('deploy', function () {
     //.pipe(publisher.sync());
 });
 
-gulp.task('default', ['css', 'html', 'text']);
+gulp.task('build', ['css', 'html', 'text']);
+gulp.task('default', ['build']);
