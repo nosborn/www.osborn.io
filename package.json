@@ -4,6 +4,10 @@
   "homepage": "https://gitlab.con/nosborn/osborn.io.git",
   "license": "MIT",
   "repository": "gitlab:nosborn/osborn.io",
+  "scripts": {
+    "build": "gulp build",
+    "deploy": "gulp deploy"
+  },
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-awspublish": "^3.3.3",

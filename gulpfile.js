@@ -27,7 +27,7 @@ gulp.task('text', function() {
     .pipe(gulp.dest('build/'))
 });
 
-gulp.task('publish', function () {
+gulp.task('deploy', function () {
   const publisher = awspublish.create({
     params: {
       Bucket: process.env.CONTENT_BUCKET
