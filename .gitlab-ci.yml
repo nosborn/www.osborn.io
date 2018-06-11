@@ -16,7 +16,7 @@ variables:
 build:
   stage: build
   script:
-    - yarn build
+    - yarn run build
 
 deploy:
   stage: deploy
@@ -26,5 +26,5 @@ deploy:
   only:
     - master
   script:
-    - yarn deploy
+    - yarn run deploy
 ...
