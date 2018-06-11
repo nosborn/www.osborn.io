@@ -16,7 +16,7 @@ variables:
 build:
   stage: build
   script:
-    - gulp
+    - yarn build
 
 deploy:
   stage: deploy
@@ -26,5 +26,5 @@ deploy:
   only:
     - master
   script:
-    - gulp publish
+    - yarn deploy
 ...
