@@ -37,6 +37,7 @@ gulp.task('sitemap', () => {
 
 gulp.task('deploy', () => {
   const publisher = awspublish.create({
+    region: process.env.AWS_DEFAULT_REGION,
     params: {
       Bucket: process.env.CONTENT_BUCKET
     }
@@ -59,7 +60,8 @@ gulp.task('deploy', () => {
     .pipe(cloudfront({
       bucket: process.env.CONTENT_BUCKET,
       distributionId: process.env.CLOUDFRONT_DISTRIBUTION_ID
-    }));
+    }))
+    .pipe(publisher.sync());
 });
 
 // LOCAL TASKS
