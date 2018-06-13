@@ -21,7 +21,7 @@ build:
 deploy:
   stage: deploy
   environment:
-    name: Production
+    name: CloudFront
     url: https://osborn.io
   only:
     - master
