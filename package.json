@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "homepage": "https://gitlab.con/nosborn/osborn.io.git",
   "license": "MIT",
+  "author": "Nick Osborn <nosborn@users.noreply.github.com>",
   "repository": "gitlab:nosborn/osborn.io",
   "scripts": {
     "build": "gulp build",
