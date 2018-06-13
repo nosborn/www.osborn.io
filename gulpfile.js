@@ -4,17 +4,8 @@ var gulp = require('gulp');
 
 var awspublish = require('gulp-awspublish');
 var cloudfront = require('gulp-cloudfront');
-var csso = require('gulp-csso');
-var less = require('gulp-less');
 var pug = require('gulp-pug');
 var revAll = require('gulp-rev-all');
-
-gulp.task('css', function() {
-  return gulp.src('src/css/*.less')
-    .pipe(less())
-    .pipe(csso())
-    .pipe(gulp.dest('build/css/'))
-});
 
 gulp.task('html', function() {
   return gulp.src('src/*.pug')
@@ -55,5 +46,5 @@ gulp.task('deploy', function () {
     //.pipe(publisher.sync());
 });
 
-gulp.task('build', ['css', 'html', 'text']);
+gulp.task('build', ['html', 'text']);
 gulp.task('default', ['build']);
