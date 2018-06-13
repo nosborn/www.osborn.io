@@ -1,25 +1,29 @@
+/* eslint-env node */
+
 'use strict';
 
-var gulp = require('gulp');
+const gulp = require('gulp');
 
-var awspublish = require('gulp-awspublish');
-var cloudfront = require('gulp-cloudfront');
-var pug = require('gulp-pug');
-var revAll = require('gulp-rev-all');
-var sitemap = require('gulp-sitemap');
+const awspublish = require('gulp-awspublish');
+const cloudfront = require('gulp-cloudfront');
+const pug = require('gulp-pug');
+const revAll = require('gulp-rev-all');
+const sitemap = require('gulp-sitemap');
 
-gulp.task('html', function() {
-  return gulp.src('src/*.pug')
+// BUILD TASKS
+
+gulp.task('html', () => {
+  gulp.src('src/*.pug')
     .pipe(pug())
-    .pipe(gulp.dest('build/'))
+    .pipe(gulp.dest('build/'));
 });
 
-gulp.task('plain', function() {
-  return gulp.src('src/*.txt')
-    .pipe(gulp.dest('build/'))
+gulp.task('plain', () => {
+  gulp.src('src/*.txt')
+    .pipe(gulp.dest('build/'));
 });
 
-gulp.task('sitemap', function () {
+gulp.task('sitemap', () => {
   gulp.src('build/index.html', {
     read: false
   })
@@ -29,7 +33,9 @@ gulp.task('sitemap', function () {
   .pipe(gulp.dest('build'));
 });
 
-gulp.task('deploy', function () {
+// DEPLOY TASKS
+
+gulp.task('deploy', () => {
   const publisher = awspublish.create({
     params: {
       Bucket: process.env.CONTENT_BUCKET
@@ -40,7 +46,7 @@ gulp.task('deploy', function () {
     // 'Cache-Control': 'max-age=315360000, no-transform, public'
   };
 
-  return gulp.src('build/**')
+  gulp.src('build/**')
     .pipe(revAll.revision({
       dontGlobal: [
         'ping.txt',
@@ -57,6 +63,8 @@ gulp.task('deploy', function () {
     }))
     .pipe(publisher.sync());
 });
+
+// LOCAL TASKS
 
 gulp.task('build', ['html', 'plain', 'sitemap']);
 gulp.task('default', ['build']);
