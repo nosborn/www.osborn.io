@@ -13,7 +13,8 @@
     "gulp-awspublish": "^3.3.3",
     "gulp-cloudfront": "^0.0.14",
     "gulp-pug": "^4.0.1",
-    "gulp-rev-all": "^0.9.7"
+    "gulp-rev-all": "^0.9.7",
+    "gulp-sitemap": "^5.1.0"
   },
   "private": true
 }

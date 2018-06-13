@@ -6,6 +6,7 @@ var awspublish = require('gulp-awspublish');
 var cloudfront = require('gulp-cloudfront');
 var pug = require('gulp-pug');
 var revAll = require('gulp-rev-all');
+var sitemap = require('gulp-sitemap');
 
 gulp.task('html', function() {
   return gulp.src('src/*.pug')
@@ -13,9 +14,19 @@ gulp.task('html', function() {
     .pipe(gulp.dest('build/'))
 });
 
-gulp.task('text', function() {
+gulp.task('plain', function() {
   return gulp.src('src/*.txt')
     .pipe(gulp.dest('build/'))
+});
+
+gulp.task('sitemap', function () {
+  gulp.src('build/index.html', {
+    read: false
+  })
+  .pipe(sitemap({
+    siteUrl: 'https://osborn.io'
+  }))
+  .pipe(gulp.dest('build'));
 });
 
 gulp.task('deploy', function () {
@@ -33,18 +44,19 @@ gulp.task('deploy', function () {
     .pipe(revAll.revision({
       dontGlobal: [
         'ping.txt',
-        'robots.txt'
+        'robots.txt',
+        'sitemap.xml'
       ]
     }))
     //.pipe(awspublish.gzip())
     .pipe(publisher.publish(headers, {noAcl: true}))
-    .pipe(awspublish.reporter({states: ['create', 'update', 'delete']}))
+    .pipe(awspublish.reporter())
     .pipe(cloudfront({
       bucket: process.env.CONTENT_BUCKET,
       distributionId: process.env.CLOUDFRONT_DISTRIBUTION_ID
-    }));
-    //.pipe(publisher.sync());
+    }))
+    .pipe(publisher.sync());
 });
 
-gulp.task('build', ['html', 'text']);
+gulp.task('build', ['html', 'plain', 'sitemap']);
 gulp.task('default', ['build']);
