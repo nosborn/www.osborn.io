@@ -60,8 +60,7 @@ gulp.task('deploy', () => {
     .pipe(cloudfront({
       bucket: process.env.CONTENT_BUCKET,
       distributionId: process.env.CLOUDFRONT_DISTRIBUTION_ID
-    }))
-    .pipe(publisher.sync());
+    }));
 });
 
 // LOCAL TASKS
