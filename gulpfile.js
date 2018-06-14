@@ -55,7 +55,7 @@ gulp.task('deploy', () => {
         'sitemap.xml'
       ]
     }))
-    .pipe(publisher.publish(headers, {noAcl: true}))
+    .pipe(publisher.publish(headers))
     .pipe(awspublish.reporter())
     .pipe(cloudfront({
       bucket: process.env.CONTENT_BUCKET,
