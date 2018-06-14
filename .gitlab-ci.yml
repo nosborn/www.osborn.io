@@ -18,7 +18,7 @@ build:
   script:
     - yarn run build
   artifacts:
-    key: ${CI_COMMIT_REF_SLUG}
+    name: ${CI_COMMIT_REF_SLUG}
     paths:
       - build/
     expire_in: 1 week
