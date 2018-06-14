@@ -1,6 +1,7 @@
 {
   "name": "osborn.io",
   "version": "0.0.0",
+  "description": "Source for https://osborn.io",
   "homepage": "https://gitlab.con/nosborn/osborn.io.git",
   "license": "MIT",
   "author": "Nick Osborn <nosborn@users.noreply.github.com>",
