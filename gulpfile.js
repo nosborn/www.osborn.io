@@ -44,7 +44,8 @@ gulp.task('deploy', () => {
   });
 
   const headers = {
-    // 'Cache-Control': 'max-age=315360000, no-transform, public'
+    // 'Cache-Control': 'max-age=315360000, no-transform, public',
+    'x-amz-acl': 'private'
   };
 
   gulp.src('build/**')
