@@ -5,7 +5,6 @@ version: 2
 jobs:
   build:
     docker:
-      # specify the version you desire here
       - image: circleci/node:lts
 
     working_directory: ~/repo
@@ -31,3 +30,11 @@ jobs:
 
       # # run tests!
       # - run: yarn test
+
+      - deploy:
+          name: deploy to AWS
+          command: |
+            if [ "${CIRCLE_BRANCH}" = "master" ]; then
+              yarn deploy
+            fi
+...
