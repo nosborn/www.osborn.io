@@ -1,6 +1,6 @@
 # osborn.io
 
-[![CircleCI](https://circleci.com/gh/nosborn/osborn.io.svg?style=svg)](https://circleci.com/gh/nosborn/osborn.io)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e5c571ee-a7af-42cc-a454-655f09ac914b/deploy-status)](https://app.netlify.com/sites/osborn-io/deploys)
 [![SecurityHeaders.io](https://securityheadersiobadges.azurewebsites.net/create/badge?domain=https://osborn.io)](https://securityheaders.io/?q=https://osborn.io&hide=on&followRedirects=on)
 
 Source for [https://osborn.io].
