@@ -1,36 +1,36 @@
-/* eslint-env node */
+(() => {
+  "use strict";
 
-'use strict';
+  const gulp = require("gulp"),
+    pug = require("gulp-pug"),
+    sitemap = require("gulp-sitemap");
 
-const gulp = require('gulp');
+  function html() {
+    return gulp
+      .src("src/*.pug")
+      .pipe(pug())
+      .pipe(gulp.dest("build/"));
+  }
+  exports.html = html;
 
-const pug = require('gulp-pug');
-const sitemap = require('gulp-sitemap');
+  function plain() {
+    return gulp.src("src/*.txt").pipe(gulp.dest("build/"));
+  }
+  exports.plan = plain;
 
-// BUILD TASKS
-
-gulp.task('html', () => {
-  gulp.src('src/*.pug')
-    .pipe(pug())
+  /*
+  function sitemap() {
+    return gulp.src('build/index.html', {
+      read: false
+    })
+    .pipe(sitemap({
+      siteUrl: 'https://osborn.io'
+    }))
     .pipe(gulp.dest('build/'));
-});
+  }
+  exports.sitemap = sitemap
+  */
 
-gulp.task('plain', () => {
-  gulp.src('src/*.txt')
-    .pipe(gulp.dest('build/'));
-});
-
-gulp.task('sitemap', () => {
-  gulp.src('build/index.html', {
-    read: false
-  })
-  .pipe(sitemap({
-    siteUrl: 'https://osborn.io'
-  }))
-  .pipe(gulp.dest('build/'));
-});
-
-// LOCAL TASKS
-
-gulp.task('build', ['html', 'plain', 'sitemap']);
-gulp.task('default', ['build']);
+  exports.build = gulp.series(html, plain /*, sitemap*/);
+  exports.default = exports.build;
+})();
