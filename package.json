@@ -1,11 +1,11 @@
 {
-  "name": "osborn.io",
-  "version": "0.1.0",
-  "description": "Source for https://osborn.io",
-  "homepage": "https://github.con/nosborn/osborn.io.git",
+  "name": "www.osborn.io",
+  "version": "0.2.0",
+  "description": "Source for https://www.osborn.io",
+  "homepage": "https://github.con/nosborn/www.osborn.io.git",
   "license": "MIT",
   "author": "Nick Osborn <nosborn@users.noreply.github.com>",
-  "repository": "github:nosborn/osborn.io",
+  "repository": "github:nosborn/www.osborn.io",
   "scripts": {
     "build": "gulp build"
   },
