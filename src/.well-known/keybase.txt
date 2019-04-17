@@ -1,0 +1,33 @@
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120af51c57ccd2d58dbece9c44b125d0c3b3757149e6d62c9f8b3a059c5514acd630a",
+      "host": "keybase.io",
+      "kid": "01208ac7c9618d190889b137784f19a29b7289f5b8fa4c437f745294b4c5e6ef34890a",
+      "uid": "b3789d846d7d75c5fdf47817b14d9f00",
+      "username": "nosborn"
+    },
+    "merkle_root": {
+      "ctime": 1555380865,
+      "hash": "f43a9aee1b6c11341f14370bd84d8c4abd5bc59684c6b28719f38a31aa1b66fb36e484b8382f54ba0a51b27dd9e6c3c065abdd3ec64f135b7a8a8893ef70297c",
+      "hash_meta": "0b76efeb3b6c44ab9045195c03d41be6e9dda30d13b037f6ba7a3a63334190a3",
+      "seqno": 5177066
+    },
+    "service": {
+      "entropy": "axN98AP2n9SX/3ZAt+fnarEe",
+      "hostname": "osborn.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "3.2.2"
+  },
+  "ctime": 1555380892,
+  "expire_in": 504576000,
+  "prev": "128e20b82d2bc7b335a3ce98cbb88c7d96a3e7d0c68b4243e2dfd455733c9799",
+  "seqno": 25,
+  "tag": "signature"
+}
