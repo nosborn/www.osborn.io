@@ -14,6 +14,6 @@
     X-XSS-Protection = "1; mode=block"
 
 [[redirects]]
-  from = "http://www-osborn-io.netlify.com/*"
+  from = "http://osborn-io.netlify.com/*"
   to = "http://www.osborn.io/:splat"
   force = true
