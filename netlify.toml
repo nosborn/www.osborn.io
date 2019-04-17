@@ -15,5 +15,5 @@
 
 [[redirects]]
   from = "http://osborn-io.netlify.com/*"
-  to = "http://www.osborn.io/:splat"
+  to = "http://osborn.io/:splat"
   force = true
