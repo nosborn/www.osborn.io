@@ -2,8 +2,7 @@
   "use strict";
 
   const gulp = require("gulp"),
-    pug = require("gulp-pug"),
-    sitemap = require("gulp-sitemap");
+    pug = require("gulp-pug");
 
   function html() {
     return gulp
@@ -18,19 +17,6 @@
   }
   exports.plan = plain;
 
-  /*
-  function sitemap() {
-    return gulp.src('build/index.html', {
-      read: false
-    })
-    .pipe(sitemap({
-      siteUrl: 'https://osborn.io'
-    }))
-    .pipe(gulp.dest('build/'));
-  }
-  exports.sitemap = sitemap
-  */
-
-  exports.build = gulp.series(html, plain /*, sitemap*/);
+  exports.build = gulp.series(html, plain);
   exports.default = exports.build;
 })();
