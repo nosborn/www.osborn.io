@@ -1,20 +1,32 @@
+==================================================================
+https://keybase.io/nosborn
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://osborn.io
+  * I am nosborn (https://keybase.io/nosborn) on keybase.
+  * I have a public key ASADVVpf7Qsfkfa42o2qAxHGpkkZ11qT9j3Q56pkS8k3zgo
+
+To do so, I am signing this object:
+
 {
   "body": {
     "key": {
-      "eldest_kid": "0120af51c57ccd2d58dbece9c44b125d0c3b3757149e6d62c9f8b3a059c5514acd630a",
+      "eldest_kid": "012003555a5fed0b1f91f6b8da8daa0311c6a64919d75a93f63dd0e7aa644bc937ce0a",
       "host": "keybase.io",
-      "kid": "01208ac7c9618d190889b137784f19a29b7289f5b8fa4c437f745294b4c5e6ef34890a",
+      "kid": "012003555a5fed0b1f91f6b8da8daa0311c6a64919d75a93f63dd0e7aa644bc937ce0a",
       "uid": "b3789d846d7d75c5fdf47817b14d9f00",
       "username": "nosborn"
     },
     "merkle_root": {
-      "ctime": 1555380865,
-      "hash": "f43a9aee1b6c11341f14370bd84d8c4abd5bc59684c6b28719f38a31aa1b66fb36e484b8382f54ba0a51b27dd9e6c3c065abdd3ec64f135b7a8a8893ef70297c",
-      "hash_meta": "0b76efeb3b6c44ab9045195c03d41be6e9dda30d13b037f6ba7a3a63334190a3",
-      "seqno": 5177066
+      "ctime": 1555478798,
+      "hash": "d41d7828c3f1a49dac6351c44f552d16900996ba80fad84fdd0bc4ab5c23fd440eab8176e49514aa594ef7fa023a5ca7ae789ccff569beec77369c7814b955f4",
+      "hash_meta": "f8dd15d98e4e7aa608b352d6b70606015faaf9571eab9f6a36eaf5486ecb6e8c",
+      "seqno": 5188511
     },
     "service": {
-      "entropy": "axN98AP2n9SX/3ZAt+fnarEe",
+      "entropy": "nZsf8FI1gHjj6brI/G8H0E1e",
       "hostname": "osborn.io",
       "protocol": "https:"
     },
@@ -25,9 +37,20 @@
     "name": "keybase.io go client",
     "version": "3.2.2"
   },
-  "ctime": 1555380892,
+  "ctime": 1555478820,
   "expire_in": 504576000,
-  "prev": "128e20b82d2bc7b335a3ce98cbb88c7d96a3e7d0c68b4243e2dfd455733c9799",
-  "seqno": 25,
+  "prev": "909feac5de6e3ad8c0448107fd6e7fe0cd8adb568398b48b63426d44e05ed815",
+  "seqno": 29,
   "tag": "signature"
 }
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgA1VaX+0LH5H2uNqNqgMRxqZJGddak/Y90OeqZEvJN84Kp3BheWxvYWTESpcCHcQgkJ/qxd5uOtjARIEH/W5/4M2K21aDmLSLY0JtROBe2BXEIIFqGROYlRZXDLA1BM42LrvkOQKPveI5IMJAsfLYkhCoAgHCo3NpZ8RAvkHcQgePaCgLpiaW6BdDIvqBzvxr33ZUl15MOmmi/J+QYNJTZGOwYL8x8Y5Hw808PgRSrWmjxDY0Mv/+AmL5CqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIEtm/IJGM2L8K87HjCx8dsJ8jpjkfXkHcWAx6rSvU61Co3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/nosborn
+
+==================================================================
