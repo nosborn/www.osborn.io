@@ -1,5 +1,6 @@
+*.log
+.DS_Store
 .envrc
 .netlify/
 build/
 node_modules/
-yarn-error.log
