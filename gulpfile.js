@@ -15,7 +15,7 @@
   function plain() {
     return gulp.src("src/**/*.txt", { dot: true }).pipe(gulp.dest("build/"));
   }
-  exports.plan = plain;
+  exports.plain = plain;
 
   exports.build = gulp.series(html, plain);
   exports.default = exports.build;
