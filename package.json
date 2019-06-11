@@ -7,10 +7,12 @@
   "author": "Nick Osborn <nosborn@users.noreply.github.com>",
   "repository": "github:nosborn/osborn.io",
   "scripts": {
-    "build": "gulp build"
+    "build": "gulp build",
+    "deploy": "gulp deploy"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-awspublish": "^4.0.0",
     "gulp-pug": "^4.0.1"
   },
   "private": true
