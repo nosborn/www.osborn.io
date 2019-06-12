@@ -14,9 +14,7 @@
   exports.html = html;
 
   function plain() {
-    return gulp
-      .src(["src/**/*.txt", "src/**/*.xml"], { dot: true })
-      .pipe(gulp.dest("build/"));
+    return gulp.src("src/**/!(*.pug)", { dot: true }).pipe(gulp.dest("build/"));
   }
   exports.plain = plain;
 
@@ -33,6 +31,7 @@
     return gulp
       .src("build/**/*", { dot: true })
       .pipe(publisher.publish(headers))
+      .pipe(publisher.sync())
       .pipe(awspublish.reporter());
   }
   exports.publish = publish;
