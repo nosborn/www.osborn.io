@@ -1,27 +1,32 @@
 ---
 name: CI
 
-on:
+on:  # yamllint disable-line rule:truthy
   pull_request:
     branches:
       - master
   push:
     branches:
       - master
+    paths-ignore:
+      - LICENSE
+      - README.md
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
         with:
           node-version: 12.x
       - name: yarn install and build
+        env:
+          CI: true
         run: |
           yarn install --frozen-lockfile
           yarn build
-        env:
-          CI: true
+      - name: deploy to S3
+        if: github_ref == 'master'
+        run: |
+          yarn deploy
