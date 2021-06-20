@@ -4,7 +4,7 @@ name: Push
 on:  # yamllint disable-line rule:truthy
   push:
     branches:
-      - master
+      - main
     paths-ignore:
       - LICENSE
       - README.md
