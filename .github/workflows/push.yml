@@ -1,10 +1,7 @@
 ---
-name: CI
+name: Push
 
 on:  # yamllint disable-line rule:truthy
-  pull_request:
-    branches:
-      - master
   push:
     branches:
       - master
@@ -12,24 +9,26 @@ on:  # yamllint disable-line rule:truthy
       - LICENSE
       - README.md
 
+env:
+  CI: true
+
+concurrency: ci-${{ github.ref }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
         with:
-          node-version: 12.x
+          node-version: "14"
       - name: yarn install and build
-        env:
-          CI: true
         run: |
           yarn install --frozen-lockfile
           yarn build
       - name: deploy to S3
-        env:
-          AWS_ACCESS_KEY_ID: "${{ secrets.AWS_ACCESS_KEY_ID }}"
-          AWS_SECRET_ACCESS_KEY: "${{ secrets.AWS_SECRET_ACCESS_KEY }}"
-        if: github.ref == 'refs/heads/master'
         run: |
           yarn deploy
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

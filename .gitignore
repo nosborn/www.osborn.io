@@ -1,5 +1,5 @@
 *.log
 .DS_Store
 .envrc
-build/
+dist/
 node_modules/

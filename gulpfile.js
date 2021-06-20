@@ -9,12 +9,12 @@
     return gulp
       .src("src/*.pug")
       .pipe(pug())
-      .pipe(gulp.dest("build/"));
+      .pipe(gulp.dest("dist/"));
   }
   exports.html = html;
 
   function plain() {
-    return gulp.src("src/**/!(*.pug)", { dot: true }).pipe(gulp.dest("build/"));
+    return gulp.src("src/**/!(*.pug)", { dot: true }).pipe(gulp.dest("dist/"));
   }
   exports.plain = plain;
 
@@ -29,7 +29,7 @@
       region: "ap-southeast-1"
     });
     return gulp
-      .src("build/**/*", { dot: true })
+      .src("dist/**/*", { dot: true })
       .pipe(publisher.publish(headers))
       .pipe(publisher.sync())
       .pipe(awspublish.reporter());
