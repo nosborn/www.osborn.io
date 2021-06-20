@@ -17,6 +17,7 @@ concurrency: ci-${{ github.ref }}
 jobs:
   build:
     runs-on: ubuntu-latest
+    environment: Live
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
