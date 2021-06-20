@@ -1,0 +1,8 @@
+body {
+	font-family: monospace;
+	line-height: 1.5;
+	padding: 1em 2em;
+}
+p {
+	text-shadow: #ccc 1px 1px 1px;
+}
