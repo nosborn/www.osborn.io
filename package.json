@@ -1,23 +1,21 @@
 {
-  "name": "osborn.io",
-  "version": "0.1.0",
-  "description": "Source for https://osborn.io",
-  "homepage": "https://github.con/nosborn/osborn.io.git",
+  "name": "www.osborn.io",
+  "version": "0.2.0",
+  "description": "Source for https://www.osborn.io",
+  "homepage": "https://github.con/nosborn/www.osborn.io.git",
   "license": "MIT",
   "author": "Nick Osborn <nosborn@users.noreply.github.com>",
   "repository": "github:nosborn/osborn.io",
   "scripts": {
-    "build": "gulp build",
-    "deploy": "gulp deploy"
+    "build": "gulp build"
   },
   "devDependencies": {
-    "eslint": "^7.32.0",
+    "eslint": "^8.3.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-promise": "^5.1.1",
     "gulp": "^4.0.2",
-    "gulp-awspublish": "^4.1.2",
     "gulp-pug": "^5.0.0"
   },
   "private": true
