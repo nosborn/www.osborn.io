@@ -23,7 +23,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Live
-      url: https://www.osborn.io
+      url: https://osborn.io
 
     steps:
       - name: Check out the repository

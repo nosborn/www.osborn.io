@@ -1,6 +1,6 @@
 # www.osborn.io
 
-Source for [https://www.osborn.io].
+Source for [https://osborn.io].
 
 ## License
 
