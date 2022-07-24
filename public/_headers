@@ -1,8 +1,0 @@
-/*
-  Content-Security-Policy: default-src 'none'; style-src 'self'
-  Permissions-Policy: interest-cohort=()
-  Referrer-Policy: strict-origin-when-cross-origin
-  X-Download-Options: noopen
-  X-Frame-Options: SAMEORIGIN
-  X-Permitted-Cross-Domain-Policies: none
-  X-XSS-Protection: 1; mode=block
