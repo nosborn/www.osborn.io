@@ -1,0 +1,12 @@
+*
+    Content-Security-Policy: base-uri 'none'; frame-ancestors 'none'; object-src: 'none'; script-src 'none'; upgrade-insecure-requests;
+    Cross-Origin-Embedder-Policy: require-corp
+    Cross-Origin-Opener-Policy: same-origin
+    Cross-Origin-Resource-Policy: same-site
+    Permissions-Policy: camera=(), geolocation={}, interest-cohort=(), microphone=()
+    Referrer-Policy: strict-origin-when-cross-origin
+    Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+    X-Content-Type-Options: nosniff
+    X-DNS-Prefetch-Control: off
+    X-Frame-Options: DENY
+    X-XSS-Protection: 0
