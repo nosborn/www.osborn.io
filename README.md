@@ -1,5 +1,7 @@
 # www.osborn.io
 
+[![statichost.eu status](https://builder.statichost.eu/www-osborn-io/status.svg)](https://builder.statichost.eu/www-osborn-io/)
+
 Source for [https://www.osborn.io].
 
 ## License
